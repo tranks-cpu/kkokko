@@ -34,12 +34,11 @@ export function GameScreen() {
       turn.hasWorm
         ? getStealableTargets(
             state.players,
-            state.tiles,
             turn.currentPlayerIndex,
             turn.currentSum
           )
         : [],
-    [state.players, state.tiles, turn.currentPlayerIndex, turn.currentSum, turn.hasWorm]
+    [state.players, turn.currentPlayerIndex, turn.currentSum, turn.hasWorm]
   );
 
   const canRoll =

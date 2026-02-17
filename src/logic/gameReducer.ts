@@ -92,7 +92,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
         const canTakeAny =
           newHasWorm &&
           (getTakeableTiles(state.tiles, newSum).length > 0 ||
-            getStealableTargets(state.players, state.tiles, state.turn.currentPlayerIndex, newSum).length > 0);
+            getStealableTargets(state.players, state.turn.currentPlayerIndex, newSum).length > 0);
         if (!canTakeAny) {
           nextPhase = 'busted';
         }
@@ -157,7 +157,6 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
 
       const targets = getStealableTargets(
         state.players,
-        state.tiles,
         currentPlayerIndex,
         currentSum
       );

@@ -1,4 +1,4 @@
-import type { GameState, Tile, Player } from '../types/game';
+import type { Tile, Player } from '../types/game';
 
 /** Get available center tiles (not owned, not disabled) sorted ascending */
 export function getAvailableCenterTiles(tiles: Tile[]): Tile[] {
@@ -22,7 +22,6 @@ export function getTakeableTiles(tiles: Tile[], sum: number): Tile[] {
 /** Get players whose top tile can be stolen (exact sum match) */
 export function getStealableTargets(
   players: Player[],
-  tiles: Tile[],
   currentPlayerIndex: number,
   sum: number
 ): { playerIndex: number; tileNumber: number }[] {

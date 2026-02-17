@@ -34,7 +34,7 @@ export function useGame(initialState?: GameState) {
       ? getTakeableTiles(tiles, turn.currentSum)
       : [];
     const stealableTargets = turn.hasWorm
-      ? getStealableTargets(players, tiles, turn.currentPlayerIndex, turn.currentSum)
+      ? getStealableTargets(players, turn.currentPlayerIndex, turn.currentSum)
       : [];
     const availableCenterTiles = getAvailableCenterTiles(tiles);
 
