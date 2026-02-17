@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Rounded amber background -->
+  <rect x="0" y="0" width="512" height="512" rx="96" ry="96" fill="#f59e0b"/>
+
+  <!-- Subtle inner border -->
+  <rect x="8" y="8" width="496" height="496" rx="88" ry="88" fill="none" stroke="#d97706" stroke-width="4" opacity="0.4"/>
+
+  <!-- Die body (white rounded rectangle, tilted slightly) -->
+  <g transform="translate(256, 220) rotate(-8)">
+    <rect x="-100" y="-100" width="200" height="200" rx="28" ry="28" fill="white" opacity="0.95"/>
+    <rect x="-100" y="-100" width="200" height="200" rx="28" ry="28" fill="none" stroke="#92400e" stroke-width="3" opacity="0.15"/>
+
+    <!-- Die dots - showing face "5" -->
+    <circle cx="-48" cy="-48" r="16" fill="#f59e0b"/>
+    <circle cx="48" cy="-48" r="16" fill="#f59e0b"/>
+    <circle cx="0" cy="0" r="16" fill="#f59e0b"/>
+    <circle cx="-48" cy="48" r="16" fill="#f59e0b"/>
+    <circle cx="48" cy="48" r="16" fill="#f59e0b"/>
+  </g>
+
+  <!-- Worm (Heckmeck worm theme) -->
+  <g transform="translate(256, 395)">
+    <path d="M-40,10 C-40,-20 -10,-30 0,-10 C10,10 40,0 40,-20 C40,-40 60,-45 70,-30 C80,-15 75,5 60,10"
+          fill="none" stroke="white" stroke-width="12" stroke-linecap="round" opacity="0.95"/>
+    <circle cx="60" cy="10" r="10" fill="white" opacity="0.95"/>
+    <circle cx="63" cy="7" r="3" fill="#f59e0b"/>
+  </g>
+
+  <!-- App name -->
+  <text x="256" y="478" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="40" fill="white" opacity="0.9">꼬꼬미노</text>
+</svg>

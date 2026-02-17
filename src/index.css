@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "@fontsource/noto-sans-kr/700.css";
+
+:root {
+  --sat: env(safe-area-inset-top);
+  --sar: env(safe-area-inset-right);
+  --sab: env(safe-area-inset-bottom);
+  --sal: env(safe-area-inset-left);
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+  font-family: 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: #1c1917;
+  color: #fafaf9;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
