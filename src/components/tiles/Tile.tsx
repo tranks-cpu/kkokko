@@ -41,7 +41,7 @@ export function Tile({
       <span className={`${isSm ? 'text-xs' : 'text-sm'} text-stone-300`}>
         {number}
       </span>
-      <div className={`flex gap-0.5 ${isSm ? 'mt-0' : 'mt-0.5'}`}>
+      <div className={`flex flex-wrap justify-center gap-0 ${isSm ? 'mt-0 max-w-[28px]' : 'mt-0.5 max-w-[36px]'}`}>
         {Array.from({ length: worms }, (_, i) => (
           <span key={i} className={isSm ? 'text-[8px]' : 'text-[10px]'}>
             🐛

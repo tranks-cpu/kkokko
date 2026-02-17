@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '../components/ui/Button';
 import { useGameContext } from '../context/GameContext';
+import { RulesModal } from '../components/modals/RulesModal';
 import {
   MIN_PLAYERS,
   MAX_PLAYERS,
@@ -14,6 +15,7 @@ export function SetupScreen() {
   const { dispatch } = useGameContext();
   const [playerCount, setPlayerCount] = useState(2);
   const [names, setNames] = useState(DEFAULT_NAMES);
+  const [showRules, setShowRules] = useState(false);
 
   const handleNameChange = (index: number, value: string) => {
     setNames((prev) => {
@@ -92,6 +94,15 @@ export function SetupScreen() {
       <Button onClick={handleStart} fullWidth className="max-w-xs">
         게임 시작
       </Button>
+
+      <button
+        onClick={() => setShowRules(true)}
+        className="text-stone-500 text-sm underline underline-offset-2"
+      >
+        게임 룰 보기
+      </button>
+
+      <RulesModal isOpen={showRules} onClose={() => setShowRules(false)} />
     </div>
   );
 }
