@@ -134,6 +134,11 @@ export function GameScreen() {
           currentSum={turn.currentSum}
           hasWorm={turn.hasWorm}
         />
+        {player.tileStack.length > 0 && turn.keptDice.length > 0 && (
+          <p className="text-xs text-red-400 mt-1 text-center">
+            💥 버스트 시 -{player.tileStack[player.tileStack.length - 1]}
+          </p>
+        )}
       </div>
 
       {/* Rolled dice area */}
