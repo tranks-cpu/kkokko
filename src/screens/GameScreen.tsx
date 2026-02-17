@@ -31,14 +31,12 @@ export function GameScreen() {
 
   const stealableTargets = useMemo(
     () =>
-      turn.hasWorm
-        ? getStealableTargets(
-            state.players,
-            turn.currentPlayerIndex,
-            turn.currentSum
-          )
-        : [],
-    [state.players, turn.currentPlayerIndex, turn.currentSum, turn.hasWorm]
+      getStealableTargets(
+        state.players,
+        turn.currentPlayerIndex,
+        turn.currentSum
+      ),
+    [state.players, turn.currentPlayerIndex, turn.currentSum]
   );
 
   const canRoll =
@@ -125,6 +123,7 @@ export function GameScreen() {
         <Scoreboard
           players={state.players}
           currentPlayerIndex={turn.currentPlayerIndex}
+          stealableTileNumbers={stealableTargets.map((t) => t.tileNumber)}
         />
       </div>
 

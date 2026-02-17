@@ -59,7 +59,7 @@ export function ActionBar({
     <div className="flex gap-3">
       {remainingDice > 0 && (
         <Button onClick={onRoll} disabled={!canRoll} className="flex-1">
-          🎲 굴리기
+          🎲 굴리기 <span className="text-xs opacity-80">({remainingDice}개)</span>
         </Button>
       )}
       {canTake && (
