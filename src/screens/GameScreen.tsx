@@ -99,7 +99,16 @@ export function GameScreen() {
             🎲 {turn.remainingDiceCount}개
           </span>
         </div>
-        <div className="w-[44px]" />
+        <button
+          onClick={() => {
+            if (confirm('새 게임을 시작할까요?')) {
+              dispatch({ type: 'RESET_GAME' });
+            }
+          }}
+          className="text-stone-500 text-xs p-1 min-w-[44px] min-h-[44px] flex items-center justify-center"
+        >
+          새게임
+        </button>
       </div>
 
       {/* Center tiles */}
